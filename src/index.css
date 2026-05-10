@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-handwritten: "Caveat", cursive;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-editorial-bg: #fdfbf7;
+  --color-editorial-text: #1a1a1a;
+  --color-editorial-border: #e8e2d8;
+  --color-editorial-accent: #c14a4a;
+  --color-editorial-secondary: #dcd7ce;
+}
+
+@layer base {
+  body {
+    @apply bg-editorial-bg text-editorial-text selection:bg-stone-200 min-h-screen;
+    background-image: none;
+  }
+}
+
+@layer components {
+  .editorial-container {
+    @apply min-h-screen border-[12px] border-editorial-border flex flex-col p-8;
+  }
+
+  .postcard-frame {
+    @apply bg-white p-6 border border-editorial-secondary shadow-sm relative transition-all duration-300 hover:shadow-lg flex flex-col;
+  }
+
+  .stamp {
+    @apply absolute top-4 right-4 w-10 h-12 border-2 border-dashed border-editorial-accent/40 flex items-center justify-center grayscale opacity-60 text-[8px] font-sans font-bold leading-none text-center;
+  }
+
+  .btn-vintage {
+    @apply w-full py-2 bg-editorial-text text-white text-[10px] font-sans uppercase tracking-[0.2em] hover:bg-editorial-accent transition-colors duration-300 text-center;
+  }
+}
