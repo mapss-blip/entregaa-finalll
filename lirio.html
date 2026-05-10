@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postales de Flores - Lirio</title>
+    <link rel="stylesheet" href="/src/index.css">
+</head>
+<body class="editorial-container items-center justify-center">
+    <div class="max-w-5xl w-full flex flex-col md:flex-row bg-white border border-editorial-secondary shadow-lg overflow-hidden">
+        <div class="w-full md:w-1/2 overflow-hidden relative group border-b md:border-b-0 md:border-r border-editorial-secondary">
+            <div class="stamp">SPECIMEN<br>LILIUM</div>
+            <img id="flower-img" src="https://picsum.photos/seed/lily_detail/800/1000" alt="Lirio" class="w-full h-full object-cover cursor-zoom-in transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer">
+            <div class="absolute bottom-4 left-4 bg-white/90 px-3 py-1 text-[10px] uppercase font-sans tracking-[0.3em] font-bold">Interactive Lens</div>
+        </div>
+
+        <div class="w-full md:w-1/2 flex flex-col p-12">
+            <div class="flex justify-between items-start mb-8">
+                <div>
+                    <p class="text-[10px] uppercase font-sans font-bold tracking-widest text-stone-400 mb-1">Catalog Number 303</p>
+                    <h1 class="text-5xl font-serif italic text-blue-900">Lilium Orientale</h1>
+                </div>
+                <button onclick="window.location.href='/index.html'" class="text-[10px] uppercase font-sans font-bold tracking-widest hover:text-editorial-accent transition-colors">Volver</button>
+            </div>
+
+            <p class="font-handwritten text-2xl mb-8 leading-relaxed text-stone-600">
+                Blanco como la nieve, puro como el alma del poeta. El lirio se alza con orgullo y elegancia suprema.
+            </p>
+
+            <div class="grid grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h4 class="text-[10px] uppercase font-sans font-bold tracking-widest text-stone-400 mb-2">Signification</h4>
+                    <p class="font-serif italic text-sm">Purificación, Renacimiento</p>
+                </div>
+                <div>
+                    <h4 class="text-[10px] uppercase font-sans font-bold tracking-widest text-stone-400 mb-2">Family</h4>
+                    <p class="font-serif italic text-sm">Liliaceae</p>
+                </div>
+            </div>
+
+            <div class="mt-auto space-y-6 pt-8 border-t border-dashed border-stone-200">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 rounded-full bg-blue-500/10 flex items-center justify-center">
+                        <div class="w-2 h-2 bg-blue-600 animate-pulse rounded-full"></div>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-[10px] uppercase font-sans font-bold tracking-widest">Ambient Recording</p>
+                        <audio controls class="w-full h-6 opacity-80 mt-1">
+                            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                </div>
+                
+                <div class="aspect-video w-full bg-stone-50 border border-stone-100 overflow-hidden group">
+                    <video class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700" controls poster="https://picsum.photos/seed/lily_video/640/360">
+                        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <button id="detail-btn" class="btn-vintage mt-8">Ver Ficha Técnica</button>
+        </div>
+    </div>
+
+    <div id="modal" class="fixed inset-0 bg-black/80 hidden items-center justify-center p-8 z-50">
+        <div class="bg-white p-12 max-w-2xl font-serif relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-2xl select-none">&times;</button>
+            <h3 class="text-3xl italic mb-4">Símbolo de la Realeza</h3>
+            <p class="leading-relaxed mb-4">El lirio, específicamente la flor de lis, ha sido un símbolo prominente en la heráldica francesa, representando la perfección, la luz y la vida.</p>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
