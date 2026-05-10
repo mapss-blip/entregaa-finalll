@@ -1,0 +1,6 @@
+{
+  "name": "Botánica",
+  "description": "Una exhibición interactiva botánica organizada en 5 páginas HTML independientes (index, rosa, tulipán, girasol, lavanda) con galerías y texto informativo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
